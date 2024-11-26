@@ -1,0 +1,108 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --base-color: #fffafa; /* 60% */
+  --primary-color: #673AB7; /* 30% (important areas) */
+  --secondary-color: #FFEB3B; /* 10% (action areas) */
+  --dark-color: #2c2c2c;
+}
+
+body{
+  background-color: var(--dark-color);
+}
+main{
+  width: 100vw;
+  height: 100vh;
+  background-image:
+  repeating-linear-gradient(
+    to right,
+    transparent 0 50px,
+    #fff1 50px 51px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    transparent 0 50px,
+    #fff1 50px 51px
+  );
+  position: relative;
+}
+
+.note{
+  width: 250px;
+  height: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 2px 2px 1px black;
+  position: absolute;
+}
+
+.noteHeader{
+  border-bottom: 1px solid black;
+  background: red;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10%;
+}
+
+.noteContent{
+  height: 90%;
+}
+
+.noteHeader button{
+  border: none;
+  background: transparent;
+  padding: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+textarea{
+  resize: none;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+#newNoteContainer{
+  background: white;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 12px;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
+#noteColor{
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  width: auto;
+  border: 0;
+  background: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#addButton{
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: large;
+}
